@@ -16,6 +16,7 @@
 #include "Filter.hpp"
 #include "Scene.hpp"
 #include "InputManager.hpp"
+#include <iostream>
 
 DebugInfo g_DEBUG_INFO = {0, 0, 0, false};
 constexpr Seed WORLD_SEED = 42;
@@ -37,7 +38,7 @@ int main(void)
 	Player * player = scene.getPlayer();
 	Camera * camera = scene.getCamera();
 
-	double timeStart, endTime, fpsInterval, sleepTime;
+	double timeStart, endTime, fpsInterval, sleepTime, proceduralTime = 0.0;
 	double deltaTime = io.DeltaTime;
 
 	// Main loop
@@ -58,6 +59,11 @@ int main(void)
 		player->getWorld()->applyGravity(deltaTime);
 		camera->setupMatrix(shader);
 		skybox.render(camera, player->getWorld()->getEnvironment());
+		if (timeStart - proceduralTime > 1 || !proceduralTime)
+		{
+			player->getWorld()->generateProcedurally();
+			proceduralTime = timeStart;
+		}
 		player->getWorld()->render(shader);
 		if (!scene.isPureViewModeEnabled())
 		{
