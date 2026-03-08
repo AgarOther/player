@@ -1,11 +1,10 @@
 <img width="1920" height="1080" alt="New Project" src="https://github.com/user-attachments/assets/ad5a4fef-d37f-4a9a-8baf-9c98dc3035f6" />
 
-# This is a Work-In-Progress solo "ft_vox".
-Despite its name, it doesn't follow 42's subject as I'm doing this solo, has ImGUI in it and player mechanics. <br>
+# This is a draft I made for the "ft_vox" project of 42 school.
+Despite its name, it doesn't follow 42's subject as I did it solo and has player mechanics. <br>
 See this more like a personal Minecraft clone in OpenGL than anything else.<br>
 It also has the Nether and The End dimensions! <br>
-But hey, if you're working on ft_vox and you're here to get help, you can check out my code and you might find what you're looking for! <br>
-If you have any questions, need help with anything or just want to suggest things, **you can DM me on discord: eleowo**
+But hey, if you're working on ft_vox and you're here to get help, you can check out my code or [our actual finished ft_vox](https://github.com/Helco18/ft_vox) and you might find what you're looking for! <br>
 # How to install [LINUX ONLY!]
 First, make sure those libraries are installed on your system:<br>
 ```
